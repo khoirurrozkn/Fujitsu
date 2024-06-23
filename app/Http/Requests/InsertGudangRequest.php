@@ -24,12 +24,8 @@ class InsertGudangRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'kode_barang' => 'required|max:255',
-            'nama_barang' => 'required|max:255',
-            'harga_barang' => 'required|integer',
-            'jumlah_barang' => 'required|integer',
-            'expired_barang' => 'required|date',
-            'id_gudang' => 'required|max:255'
+            'kode_gudang' => 'required|max:255',
+            'nama_gudang' => 'required|max:255',
         ];
     }
 }

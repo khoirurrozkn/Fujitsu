@@ -28,4 +28,16 @@ class Controller extends BaseController
             ]
         ], $code);
     }
+
+    protected function responseDataWithPagination($code, $description, $data, $pagination)
+    {
+        return response()->json([
+            'status' => [
+                'code' => $code,
+                'description' => $description
+            ],
+            'data' => $data,
+            'pagination' => $pagination
+        ], $code);
+    }
 }
